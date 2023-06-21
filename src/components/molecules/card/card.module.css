@@ -1,0 +1,16 @@
+.card {
+  @apply bg-white rounded-lg shadow h-full overflow-hidden;
+  width: 180px;
+}
+
+.content {
+  @apply flex flex-col h-full;
+}
+
+.info {
+  @apply mt-2 text-base text-gray-400 flex-1 pt-6 px-2.5 pb-3;
+}
+
+.title {
+  @apply font-bold text-black;
+}
