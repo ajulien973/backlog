@@ -1,4 +1,4 @@
-import { forwardRef, ComponentProps } from "react";
+import { ComponentProps } from "react";
 
 import styles from "./card.module.css";
 
@@ -9,30 +9,27 @@ export interface CardProps
   subjectId: string;
 }
 
-const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ title, releaseDate, subjectId }) => {
-    const imgSrc = `https://img.rgstatic.com/content/movie/${subjectId}/poster-342.jpg`;
-    const imgAlt = `${title} Poster`;
+const Card = ({ title, releaseDate, subjectId }: CardProps) => {
+  const imgSrc = `https://img.rgstatic.com/content/movie/${subjectId}/poster-342.jpg`;
+  const imgAlt = `${title} Poster`;
 
-    const formatDate = (dateIso: string) => {
-      const date = new Date(dateIso);
-      return date.toDateString();
-    };
+  const formatDate = (dateIso: string) => {
+    const date = new Date(dateIso);
+    return date.toDateString();
+  };
 
-    return (
-      <div className={styles.card}>
-        <div className={styles.content}>
-          <div>
-            <img src={imgSrc} alt={imgAlt} />
-          </div>
-          <div className={styles.info}>
-            <h3 className={styles.title}>{title}</h3>
-            <p className={styles.releaseDate}>{formatDate(releaseDate)}</p>
-          </div>
+  return (
+    <div className={styles.card}>
+      <div className={styles.content}>
+        <div>
+          <img src={imgSrc} alt={imgAlt} />
+        </div>
+        <div className={styles.info}>
+          <h3 className={styles.title}>{title}</h3>
+          <p className={styles.releaseDate}>{formatDate(releaseDate)}</p>
         </div>
       </div>
-    );
-  }
-);
-
+    </div>
+  );
+};
 export default Card;
