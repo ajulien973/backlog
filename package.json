@@ -39,6 +39,7 @@
     "start": "vite",
     "build": "vite build",
     "test": "jest",
+    "lint": "eslint src --ext tsx --report-unused-disable-directives --max-warnings 0",
     "postinstall": "husky install"
   },
   "dependencies": {
