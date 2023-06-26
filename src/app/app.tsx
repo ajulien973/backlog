@@ -1,16 +1,10 @@
-import Page from "components/templates/page";
-import MediaList from "components/organisms/media-list";
-import movies from "app/movies-list";
+import Home from "pages/home";
 import styles from "./app.module.css";
 
 const App = (): JSX.Element => {
   return (
     <main className={styles.main}>
-      <Page title={"Popular movies"}>
-        <section>
-          <MediaList mediaList={movies.results} />
-        </section>
-      </Page>
+      <Home />
     </main>
   );
 };
