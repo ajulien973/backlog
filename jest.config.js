@@ -9,5 +9,6 @@ module.exports = {
   moduleDirectories: ["node_modules", "./src"],
   moduleNameMapper: {
     "\\.(css)$": "identity-obj-proxy",
+    "^mirage/(.*)$": "<rootDir>/tests/mirage/$1",
   },
 };
