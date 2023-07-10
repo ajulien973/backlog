@@ -20,7 +20,8 @@
       "app/*": ["src/app/*"],
       "components/*": ["src/components/*"],
       "pages/*": ["src/pages/*"],
-      "hooks/*": ["src/hooks/*"]
+      "hooks/*": ["src/hooks/*"],
+      "mirage/*": ["src/tests/mirage/*"],
     }
   },
   "include": ["./src"]
