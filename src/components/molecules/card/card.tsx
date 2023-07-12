@@ -7,10 +7,16 @@ export interface CardProps
   title: string;
   releaseDate: string;
   subjectId: string;
+  type: string;
 }
 
-const Card = ({ title, releaseDate, subjectId }: CardProps) => {
-  const imgSrc = `https://img.rgstatic.com/content/movie/${subjectId}/poster-342.jpg`;
+const TYPES: { [key: string]: string } = {
+  m: "movie",
+  s: "show",
+};
+
+const Card = ({ title, releaseDate, subjectId, type }: CardProps) => {
+  const imgSrc = `https://img.rgstatic.com/content/${TYPES[type]}/${subjectId}/poster-342.jpg`;
   const imgAlt = `${title} Poster`;
 
   const formatDate = (dateIso: string) => {
