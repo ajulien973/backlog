@@ -9,11 +9,13 @@ describe("MediaList test", () => {
         title: "Star Wars",
         released_on: "2022-12-14T00:00:00",
         id: "c77578d5-2736-4da6-9e8e-269509c5ef61",
+        content_type: "m",
       },
       {
         title: "Empire Strikes Back",
         released_on: "2023-12-14T00:00:00",
         id: "c77578d5-2736-4da6-9e8e-269509c5ef62",
+        content_type: "m",
       },
     ];
 

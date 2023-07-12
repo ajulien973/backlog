@@ -11,6 +11,7 @@ export interface Media {
   title: string;
   released_on: string;
   id: string;
+  content_type: string;
 }
 
 const MediaList = ({ mediaList }: MediaListProps) => {
@@ -27,6 +28,7 @@ const MediaList = ({ mediaList }: MediaListProps) => {
             title={props.title}
             releaseDate={props.released_on}
             subjectId={props.id}
+            type={props.content_type}
           />
         </div>
       ))}
