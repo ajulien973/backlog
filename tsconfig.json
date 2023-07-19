@@ -21,7 +21,8 @@
       "components/*": ["src/components/*"],
       "pages/*": ["src/pages/*"],
       "hooks/*": ["src/hooks/*"],
-      "mirage/*": ["src/tests/mirage/*"],
+      "tests/*": ["src/tests/*"],
+      "mirage/*": ["src/tests/mirage/*"]
     }
   },
   "include": ["./src"]

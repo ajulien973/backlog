@@ -13,6 +13,7 @@ export default defineConfig((configEnv) => {
         components: resolve(__dirname, "src", "components"),
         pages: resolve(__dirname, "src", "pages"),
         hooks: resolve(__dirname, "src", "hooks"),
+        tests: resolve(__dirname, "src", "tests"),
         mirage: resolve(__dirname, "src", "tests/mirage"),
       },
     },
