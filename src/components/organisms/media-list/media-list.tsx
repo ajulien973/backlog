@@ -1,17 +1,11 @@
 import { ComponentProps } from "react";
 import styles from "./media-list.module.css";
 import Card from "components/molecules/card";
+import { Media } from "hooks/api/types";
 
 export interface MediaListProps
   extends Omit<ComponentProps<"div">, "className" | "children"> {
   mediaList: Media[];
-}
-
-export interface Media {
-  title: string;
-  released_on: string;
-  id: string;
-  content_type: string;
 }
 
 const MediaList = ({ mediaList }: MediaListProps) => {
