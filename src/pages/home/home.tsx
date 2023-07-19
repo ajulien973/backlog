@@ -1,30 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import Page from "components/templates/page";
 import MediaList from "components/organisms/media-list";
+import { useGetMovies } from "hooks/api/movies";
 
 export const Home = () => {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      const response = await fetch(
-        `https://api.themoviedb.org/3/movie/popular`
-      );
-      const data = await response.json();
-
-      if (data) {
-        setMovies(data.movies);
-      }
-    };
-    getData();
-  }, []);
+  const { data: movies } = useGetMovies();
 
   return (
     <Page title={"Popular movies"}>
-      <section>
-        <MediaList mediaList={movies} />
-      </section>
+      <section>{movies && <MediaList mediaList={movies} />}</section>
     </Page>
   );
 };

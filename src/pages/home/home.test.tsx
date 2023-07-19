@@ -3,7 +3,7 @@ import { Server } from "miragejs";
 
 import { Home } from "./home";
 import { makeServer } from "mirage/server";
-import { render } from "@testing-library/react";
+import { renderWithClient } from "tests/utils/createQueryWrapper";
 
 describe("Home Page", () => {
   let server: Server;
@@ -17,7 +17,7 @@ describe("Home Page", () => {
   });
 
   test("should match snapshot", async () => {
-    const page = await render(<Home />);
+    const page = await renderWithClient(<Home />);
 
     expect(page).toMatchSnapshot();
   });
