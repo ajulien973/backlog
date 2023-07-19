@@ -1,18 +1,7 @@
-import { createServer, Registry } from "miragejs";
+import { createServer } from "miragejs";
 import { movies } from "mirage/models/movie-data";
 import { series } from "mirage/models/serie-data";
-import { Movie } from "mirage/models/movie";
-import { Serie } from "mirage/models/serie";
-import Schema from "miragejs/orm/schema";
-
-const models = {
-  movie: Movie,
-  serie: Serie,
-};
-const factories = {};
-
-type AppRegistry = Registry<typeof models, typeof factories>;
-type AppSchema = Schema<AppRegistry>;
+import { AppSchema, models } from "mirage/types";
 
 export function makeServer({ environment = "test" } = {}) {
   return createServer({
