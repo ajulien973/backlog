@@ -1,6 +1,8 @@
 import React from "react";
-import MediaList, { Media } from "./media-list";
 import { render } from "@testing-library/react";
+
+import MediaList from "./media-list";
+import { Media } from "hooks/api/types";
 
 describe("MediaList test", () => {
   test("Should render the media list", async () => {
